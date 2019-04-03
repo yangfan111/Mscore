@@ -42,6 +42,7 @@ namespace System.Collections {
     [System.Runtime.InteropServices.ComVisible(true)]
     public class ArrayList : IList, ICloneable
     {
+        
         private Object[] _items;
         [ContractPublicPropertyName("Count")]
         private int _size;
@@ -234,7 +235,7 @@ namespace System.Collections {
         // to remain sorted.
         // 
         // The method uses the Array.BinarySearch method to perform the
-        // search.
+        // search. 
         // 
         public virtual int BinarySearch(int index, int count, Object value, IComparer comparer) {
             if (index < 0)
@@ -355,7 +356,7 @@ namespace System.Collections {
     
         // Returns a list wrapper that is fixed at the current size.  Operations
         // that add or remove items will fail, however, replacing items is allowed.
-        //
+        //-返回一个固定长度列表
         public static IList FixedSize(IList list) {
             if (list==null)
                 throw new ArgumentNullException("list");
