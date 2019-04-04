@@ -25,6 +25,10 @@ namespace System.Collections.Generic {
 #if CONTRACTS_FULL
     [ContractClass(typeof(IDictionaryContract<,>))]
 #endif // CONTRACTS_FULL
+    //- 泛型嵌套，KeyValuePair<TKey, TValue>做为ICollection的模板
+    //- ICollection<TKey> keys，
+    //- ICollection<TValue> Values,
+    //- ICollection<KeyValuePair<TKey, TValue>> KeyValuePairs
     public interface IDictionary<TKey, TValue> : ICollection<KeyValuePair<TKey, TValue>>
     {
         // Interfaces are not serializable

@@ -39,7 +39,7 @@ namespace System.Collections.Generic {
         public TValue Value {
             get { return value; }
         }
-
+        //-ToString写法
         public override string ToString() {
             StringBuilder s = StringBuilderCache.Acquire();
             s.Append('[');

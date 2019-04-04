@@ -64,14 +64,16 @@ namespace System.Collections.Generic {
             public TKey key;           // Key of entry
             public TValue value;         // Value of entry
         }
-
+//- buckets[targetBucket]:记录Entry的index default = -1
         private int[] buckets;
+        //-数据累加处理
         private Entry[] entries;
-        private int count;
+        //-entitys实际累加值
+        private int count; //-default 0
         private int version;
-        private int freeList;
+        private int freeList;//-default -1
         private int freeCount;
-        private IEqualityComparer<TKey> comparer;
+        private IEqualityComparer<TKey> comparer; //-default  EqualityComparer<TKey>.Default;
         private KeyCollection keys;
         private ValueCollection values;
         private Object _syncRoot;
@@ -102,10 +104,10 @@ namespace System.Collections.Generic {
         }
 
         public Dictionary(IDictionary<TKey,TValue> dictionary): this(dictionary, null) {}
-
+        //-diactionary以GetEnumator(KeyValuePair<TKey,TValue>)进行组件遍历
         public Dictionary(IDictionary<TKey,TValue> dictionary, IEqualityComparer<TKey> comparer):
             this(dictionary != null? dictionary.Count: 0, comparer) {
-
+            
             if( dictionary == null) {
                 ThrowHelper.ThrowArgumentNullException(ExceptionArgument.dictionary);
             }
@@ -315,7 +317,7 @@ namespace System.Collections.Generic {
             entries = new Entry[size];
             freeList = -1;
         }
-
+        //-替换 && 添加
         private void Insert(TKey key, TValue value, bool add) {
         
             if( key == null ) {
@@ -359,11 +361,13 @@ namespace System.Collections.Generic {
                 index = count;
                 count++;
             }
-
+//-遍历是按照他的添加顺序来决定的
             entries[index].hashCode = hashCode;
+            //-添加链表
             entries[index].next = buckets[targetBucket];
             entries[index].key = key;
             entries[index].value = value;
+            //-把当前index放在buckets的第一位
             buckets[targetBucket] = index;
             version++;
 

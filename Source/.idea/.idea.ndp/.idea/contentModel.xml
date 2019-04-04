@@ -31,6 +31,7 @@
       </e>
       <e p="ndp\cdf\src\NetFx20\System.Messaging" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="Messaging" t="Include">
             <e p="AccessControlEntry.cs" t="Include" />
@@ -114,6 +115,7 @@
       </e>
       <e p="ndp\cdf\src\NetFx20\System.Transactions" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="Transactions" t="Include">
             <e p="CommittableTransaction.cs" t="Include" />
@@ -183,6 +185,7 @@
       </e>
       <e p="ndp\cdf\src\NetFx20\System.Web.Services" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="ComponentModel" t="Include">
             <e p="CompModSwitches.cs" t="Include" />
@@ -378,6 +381,7 @@
       </e>
       <e p="ndp\cdf\src\NetFx35\System.IO.Log" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="io" t="Include">
             <e p="Log" t="Include">
@@ -439,6 +443,7 @@
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="GlobalSuppressions.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SR.cs" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
@@ -567,6 +572,7 @@
         <e p="GlobalSuppressions.cs" t="Include" />
         <e p="ImageResources.designer.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SR.cs" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
@@ -762,6 +768,7 @@
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SuppressMessages.cs" t="Include" />
         <e p="system" t="Include">
           <e p="Activities" t="Include">
@@ -1231,6 +1238,7 @@
       <e p="ndp\cdf\src\NetFx40\System.Activities.DurableInstancing" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="Activities" t="Include">
             <e p="DurableInstancing" t="Include">
@@ -1297,6 +1305,7 @@
       <e p="ndp\cdf\src\NetFx40\System.Runtime.DurableInstancing" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="RunTime" t="Include">
             <e p="DurableInstancing" t="Include">
@@ -1351,6 +1360,7 @@
       <e p="ndp\cdf\src\NetFx40\System.ServiceModel.Activities" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SuppressMessages.cs" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
@@ -1550,6 +1560,7 @@
       <e p="ndp\cdf\src\NetFx40\System.ServiceModel.Channels" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
             <e p="Channels" t="Include">
@@ -1607,6 +1618,7 @@
       <e p="ndp\cdf\src\NetFx40\System.ServiceModel.Discovery" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SuppressMessages.cs" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
@@ -1818,6 +1830,7 @@
       </e>
       <e p="ndp\cdf\src\NetFx40\System.ServiceModel.Routing" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="SuppressMessages.cs" t="Include" />
         <e p="system" t="Include">
           <e p="ServiceModel" t="Include">
@@ -1868,6 +1881,7 @@
       <e p="ndp\cdf\src\NetFx40\System.Xaml.Hosting" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="Xaml" t="Include">
             <e p="Hosting" t="Include">
@@ -1941,9 +1955,11 @@
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="System.Activities.Core.Presentation" t="IncludeRecursive">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="SR.Designer.cs" t="Include" />
           <e p="system" t="Include">
             <e p="Activities" t="Include">
@@ -2850,6 +2866,7 @@
           </e>
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
@@ -2858,6 +2875,7 @@
       <e p="ndp\cdf\src\System.ServiceModel.Internals" t="IncludeRecursive">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="RunTime" t="Include">
             <e p="ActionItem.cs" t="Include" />
@@ -2946,6 +2964,7 @@
       <e p="ndp\cdf\src\WCF" t="IncludeRecursive">
         <e p="IdentityModel" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="AppContextDefaultValues.cs" t="Include" />
             <e p="IdentityModel" t="Include">
@@ -3475,8 +3494,10 @@
           <e p="friends.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Serialization" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="RunTime" t="Include">
               <e p="Serialization" t="Include">
@@ -3650,6 +3671,7 @@
         <e p="ServiceModel" t="IncludeRecursive">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="collections" t="Include">
               <e p="objectmodel" t="Include">
@@ -5412,6 +5434,7 @@
         </e>
         <e p="SMDiagnostics" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="SMDiagnostics.csproj" t="IncludeRecursive" />
           <e p="system" t="Include">
             <e p="ServiceModel" t="Include">
@@ -5440,6 +5463,7 @@
         </e>
         <e p="SMSvcHost" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="SMSvcHost.csproj" t="IncludeRecursive" />
           <e p="system" t="Include">
             <e p="ServiceModel" t="Include">
@@ -5494,6 +5518,7 @@
         <e p="System.ServiceModel.Activation" t="IncludeRecursive">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="ServiceModel" t="Include">
               <e p="Activation" t="Include">
@@ -5576,6 +5601,7 @@
           <e p="EndpointConfigContainer.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
           <e p="Options.cs" t="Include" />
+          <e p="packages.config" t="Include" />
           <e p="SafeNativeMethods.cs" t="Include" />
           <e p="SvcFileManager.cs" t="Include" />
           <e p="Tool.cs" t="Include" />
@@ -5586,6 +5612,7 @@
         <e p="Tools\svcutil" t="IncludeRecursive">
           <e p="CommandLineParser.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="svcutil.csproj" t="IncludeRecursive" />
         </e>
         <e p="Tools\WcfCommonResStrings" t="Include">
@@ -5645,11 +5672,13 @@
             <e p="WsatSecurityModel.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="WsatConfig.csproj" t="IncludeRecursive" />
           <e p="WsatUI.csproj" t="IncludeRecursive" />
         </e>
         <e p="WasHosting" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="ServiceModel" t="Include">
               <e p="WasHosting" t="Include">
@@ -5761,6 +5790,7 @@
           <e p="WorkflowMessageEventHandler.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Parallel.cs" t="Include" />
         <e p="Policy.cs" t="Include" />
         <e p="Role" t="Include">
@@ -6085,6 +6115,7 @@
           <e p="Utility.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Shared" t="Include">
           <e p="AssemblyRef.cs" t="Include" />
           <e p="BasePropertyDescriptor.cs" t="Include" />
@@ -6157,6 +6188,7 @@
         <e p="Lock.cs" t="Include" />
         <e p="MD5HashHelper.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="PerformanceCounterManager.cs" t="Include" />
         <e p="QueueException.cs" t="Include" />
         <e p="RTTrackingProfile.cs" t="Include" />
@@ -6255,6 +6287,7 @@
         </e>
         <e p="mscorlib.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="__comobject.cs" t="Include" />
           <e p="__filters.cs" t="Include" />
@@ -7658,6 +7691,7 @@
           <e p="wsdlwriter.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="services" t="Include">
           <e p="remotingclientproxy.cs" t="Include" />
           <e p="remotingservice.cs" t="Include" />
@@ -7666,6 +7700,7 @@
       </e>
       <e p="ndp\clr\src\managedlibraries\security" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="system" t="Include">
           <e p="security" t="Include">
             <e p="cryptography" t="Include">
@@ -7728,6 +7763,7 @@
             <e p="assemblyattributes.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="AddIn" t="Include">
               <e p="AddInAttribute.cs" t="Include" />
@@ -7799,6 +7835,7 @@
         </e>
         <e p="AddIn\Contract" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="AddIn" t="Include">
               <e p="Contract" t="Include">
@@ -7815,6 +7852,7 @@
         </e>
         <e p="Caching" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
@@ -8654,6 +8692,7 @@
             </e>
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="Configuration" t="Include">
               <e p="AppSettingsSection.cs" t="Include" />
@@ -8984,6 +9023,7 @@
             <e p="assemblyattributes.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="collections" t="Include">
               <e p="generic" t="Include">
@@ -9365,6 +9405,7 @@
             </e>
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="AcceptRejectRule.cs" t="Include" />
@@ -9869,6 +9910,7 @@
         <e p="DataEntity" t="IncludeRecursive">
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="Common" t="Include">
@@ -10679,6 +10721,7 @@
         </e>
         <e p="DataEntityDesign\Design" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="Entity" t="Include">
@@ -10777,6 +10820,7 @@
         <e p="DataSet" t="IncludeRecursive">
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="DataRowComparer.cs" t="Include" />
@@ -10925,6 +10969,7 @@
             </e>
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="System.Web.DataVisualization.csproj" t="IncludeRecursive" />
           <e p="System.Windows.Forms.DataVisualization.csproj" t="IncludeRecursive" />
           <e p="WebForm" t="Include">
@@ -10951,6 +10996,7 @@
         <e p="DataWeb\Client" t="IncludeRecursive">
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="ShippingAssemblyAttributes.cs" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
@@ -11073,6 +11119,7 @@
         </e>
         <e p="DataWeb\Design" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="Common" t="Include">
@@ -11146,6 +11193,7 @@
         <e p="DataWeb\Server" t="IncludeRecursive">
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="ShippingAssemblyAttributes.cs" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
@@ -11318,6 +11366,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="data" t="Include">
               <e p="WebControls" t="Include">
@@ -11353,6 +11402,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="GlobalSuppressions.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="Resources.Designer.cs" t="Include" />
           </e>
@@ -11425,6 +11475,7 @@
             <e p="MetaModel.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
@@ -11583,6 +11634,7 @@
             <e p="UrlPath.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="System.Web.Mobile.csproj" t="IncludeRecursive" />
           <e p="UI" t="Include">
             <e p="MobileControls" t="Include">
@@ -12315,6 +12367,7 @@
         <e p="Numerics" t="IncludeRecursive">
           <e p="BaselineExcludes.lst.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="Numerics" t="Include">
               <e p="BigInteger.cs" t="Include" />
@@ -12342,6 +12395,7 @@
           <e p="System.Numerics.dll.Triaged.lst.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="regex" t="Include">
           <e p="system" t="Include">
             <e p="text" t="Include">
@@ -12725,6 +12779,7 @@
             <e p="UnsafeMethods.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="System.Net.csproj" t="IncludeRecursive" />
         </e>
         <e p="winforms" t="Include">
@@ -13634,6 +13689,7 @@
           <e p="methodset.cs" t="Include" />
           <e p="MgmtResManager.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Property.cs" t="Include" />
           <e p="propertyset.cs" t="Include" />
           <e p="qualifier.cs" t="Include" />
@@ -13645,6 +13701,7 @@
         </e>
         <e p="XLinq" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="Xml" t="Include">
               <e p="Linq" t="Include">
@@ -13659,6 +13716,7 @@
         </e>
         <e p="Xml" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="Xml" t="Include">
               <e p="Assembly" t="Include">
@@ -14152,6 +14210,7 @@
         </e>
         <e p="XmlUtils" t="IncludeRecursive">
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="system" t="Include">
             <e p="Xml" t="Include">
               <e p="Xsl" t="Include">
@@ -14386,6 +14445,7 @@
             <e p="ICustomLoaderHelperFunctions.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
@@ -14467,6 +14527,7 @@
             <e p="Validator.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
@@ -14564,6 +14625,7 @@
             </e>
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Properties" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
           </e>
@@ -14676,6 +14738,7 @@
             <e p="WebServiceErrorEvent.cs" t="Include" />
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="Profile" t="Include">
             <e p="ProfileService.cs" t="Include" />
           </e>
@@ -15517,6 +15580,7 @@
           <e p="NotificationContext.cs" t="Include" />
           <e p="obj" t="ExcludeRecursive" />
           <e p="OutputCacheModule.cs" t="Include" />
+          <e p="packages.config" t="Include" />
           <e p="PartitionResolver.cs" t="Include" />
           <e p="PerfCounters.cs" t="Include" />
           <e p="PipelineModuleStepContainer.cs" t="Include" />
@@ -16697,6 +16761,7 @@
       </e>
       <e p="wpf" t="IncludeRecursive">
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="PresentationFramework.csproj" t="IncludeRecursive" />
         <e p="src" t="IncludeRecursive">
           <e p="Base" t="Include">
@@ -19817,6 +19882,7 @@
             </e>
           </e>
           <e p="obj" t="ExcludeRecursive" />
+          <e p="packages.config" t="Include" />
           <e p="PresentationBuildTasks.csproj" t="IncludeRecursive" />
           <e p="PresentationCore.csproj" t="IncludeRecursive" />
           <e p="Shared" t="Include">
@@ -19988,6 +20054,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="PresentationFramework.Aero.csproj" t="IncludeRecursive" />
           </e>
           <e p="Themes\Classic" t="IncludeRecursive">
@@ -20000,6 +20067,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="PresentationFramework.Classic.csproj" t="IncludeRecursive" />
           </e>
           <e p="Themes\Luna" t="IncludeRecursive">
@@ -20014,6 +20082,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="PresentationFramework.Luna.csproj" t="IncludeRecursive" />
           </e>
           <e p="Themes\Royale" t="IncludeRecursive">
@@ -20028,6 +20097,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="PresentationFramework.Royale.csproj" t="IncludeRecursive" />
           </e>
           <e p="Themes\Shared" t="Include">
@@ -20088,6 +20158,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="system" t="Include">
               <e p="Windows" t="Include">
                 <e p="Automation" t="Include">
@@ -20217,6 +20288,7 @@
               </e>
             </e>
             <e p="obj" t="ExcludeRecursive" />
+            <e p="packages.config" t="Include" />
             <e p="UIAutomationClientsideProviders.csproj" t="IncludeRecursive" />
           </e>
           <e p="WindowsBase.csproj" t="IncludeRecursive" />
