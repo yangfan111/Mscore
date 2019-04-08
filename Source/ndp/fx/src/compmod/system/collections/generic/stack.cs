@@ -30,6 +30,7 @@ namespace System.Collections.Generic {
     public class Stack<T> : IEnumerable<T>, 
         System.Collections.ICollection,
         IReadOnlyCollection<T> {
+        //-Stack可扩容
         private T[] _array;     // Storage for stack elements
         private int _size;           // Number of items in the stack.
         private int _version;        // Used to keep enumerator in sync w/ collection.
@@ -115,7 +116,10 @@ namespace System.Collections.Generic {
             _version++;
         }
 
-        /// <include file='doc\Stack.uex' path='docs/doc[@for="Stack.Contains"]/*' />
+        /// <include file='doc\Stack.uex' path='docs/doc[@for="Stack.Contains"]/*' /
+        //-比较方式  ：EqualityComparer<T> c = EqualityComparer<T>.Default;
+        //-comparer.GetHashCode(key)
+        //-c.Equals(_array[count], item) 
         public bool Contains(T item) {
             int count = _size;
 
@@ -218,6 +222,7 @@ namespace System.Collections.Generic {
     
         // Pops an item from the top of the stack.  If the stack is empty, Pop
         // throws an InvalidOperationException.
+        //-快速出栈
         /// <include file='doc\Stack.uex' path='docs/doc[@for="Stack.Pop"]/*' />
         public T Pop() {
             if (_size == 0)

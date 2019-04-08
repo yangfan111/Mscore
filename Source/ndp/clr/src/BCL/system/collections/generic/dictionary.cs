@@ -229,7 +229,7 @@ namespace System.Collections.Generic {
         public bool ContainsKey(TKey key) {
             return FindEntry(key) >= 0;
         }
-
+        //-ContainsValue，去寻找他的value
         public bool ContainsValue(TValue value) {
             if (value == null) {
                 for (int i = 0; i < count; i++) {
@@ -244,7 +244,7 @@ namespace System.Collections.Generic {
             }
             return false;
         }
-
+        //-拷贝到KeyValuePair数组当中
         private void CopyTo(KeyValuePair<TKey,TValue>[] array, int index) {
             if (array == null) {
                 ThrowHelper.ThrowArgumentNullException(ExceptionArgument.array);
@@ -295,7 +295,7 @@ namespace System.Collections.Generic {
                 info.AddValue(KeyValuePairsName, array, typeof(KeyValuePair<TKey, TValue>[]));
             }
         }
-
+        //-查找拥有hashcode并且value equals的元素
         private int FindEntry(TKey key) {
             if( key == null) {
                 ThrowHelper.ThrowArgumentNullException(ExceptionArgument.key);
@@ -367,7 +367,7 @@ namespace System.Collections.Generic {
             entries[index].next = buckets[targetBucket];
             entries[index].key = key;
             entries[index].value = value;
-            //-把当前index放在buckets的第一位
+            //-buckets[targetBucket]永远只存第一个元素，把当前index放在buckets的第一位
             buckets[targetBucket] = index;
             version++;
 
@@ -443,7 +443,7 @@ namespace System.Collections.Generic {
         private void Resize() {
             Resize(HashHelpers.ExpandPrime(count), false);
         }
-
+        //-扩容会重新创建，产生gc
         private void Resize(int newSize, bool forceNewHashCodes) {
             Contract.Assert(newSize >= entries.Length);
             int[] newBuckets = new int[newSize];
@@ -485,6 +485,7 @@ namespace System.Collections.Generic {
                         else {
                             entries[last].next = entries[i].next;
                         }
+                        //-remove将bucket对应entity重置为无效值
                         entries[i].hashCode = -1;
                         entries[i].next = freeList;
                         entries[i].key = default(TKey);
@@ -498,7 +499,7 @@ namespace System.Collections.Generic {
             }
             return false;
         }
-
+            //-tryGetValue会比containsKey少执行一次
         public bool TryGetValue(TKey key, out TValue value) {
             int i = FindEntry(key);
             if (i >= 0) {
@@ -816,7 +817,7 @@ namespace System.Collections.Generic {
             public Enumerator GetEnumerator() {
                 return new Enumerator(dictionary);
             }
-
+            //-将key放进TKey[]的数组中，迭代器的好处是不会生成一个数组结构，只进行遍历操作
             public void CopyTo(TKey[] array, int index) {
                 if (array == null) {
                     ThrowHelper.ThrowArgumentNullException(ExceptionArgument.array);
