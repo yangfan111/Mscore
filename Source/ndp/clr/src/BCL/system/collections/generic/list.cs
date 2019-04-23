@@ -30,7 +30,7 @@ namespace System.Collections.Generic
     // of the internal array. As elements are added to a List, the capacity
     // of the List is automatically increased as required by reallocating the
     // internal array.
-    // 
+    //-ArrayList继承IList.List继承IList泛型
     [DebuggerTypeProxy(typeof(Mscorlib_CollectionDebugView<>))]
     [DebuggerDisplay("Count = {Count}")]
     [Serializable]

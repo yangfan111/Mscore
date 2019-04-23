@@ -71,8 +71,8 @@ namespace System.Collections.Generic {
         //-entitys实际累加值
         private int count; //-default 0
         private int version;
-        private int freeList;//-default -1
-        private int freeCount;
+        private int freeList;//-default -1，内部维护一个空节点链表
+        private int freeCount;//-remove的时候，freeCount增加1
         private IEqualityComparer<TKey> comparer; //-default  EqualityComparer<TKey>.Default;
         private KeyCollection keys;
         private ValueCollection values;
@@ -133,7 +133,7 @@ namespace System.Collections.Generic {
         public int Count {
             get { return count - freeCount; }
         }
-
+        //-ICollection<TKey> 和KeyCollection是一样的
         public KeyCollection Keys {
             get {
                 Contract.Ensures(Contract.Result<KeyCollection>() != null);
@@ -266,7 +266,8 @@ namespace System.Collections.Generic {
                 }
             }
         }
-
+        //-Dict.GetEnumerator() :Get KeyPair<k,v>Enumerator
+        //-Dict.Keys/Values: KeyCollection/ValueCollection =>GetEnumerator()
         public Enumerator GetEnumerator() {
             return new Enumerator(this, Enumerator.KeyValuePair);
         }
@@ -318,6 +319,7 @@ namespace System.Collections.Generic {
             freeList = -1;
         }
         //-替换 && 添加
+        //-查找规则：0.当有备用数组元素时,取备用数组 1.当数组长度已满时，扩容，取第一个 2.当数组长度未满时,取第一个
         private void Insert(TKey key, TValue value, bool add) {
         
             if( key == null ) {
@@ -346,29 +348,31 @@ namespace System.Collections.Generic {
                 collisionCount++;
 #endif
             }
-            int index;
+            int headIndex;
             if (freeCount > 0) {
-                index = freeList;
-                freeList = entries[index].next;
+                headIndex = freeList;
+                freeList = entries[headIndex].next;
                 freeCount--;
             }
-            else {
+            //- Count = count - freeCount;
+            else {//-当前没有多余Count，扩容，取最后一位
                 if (count == entries.Length)
                 {
                     Resize();
                     targetBucket = hashCode % buckets.Length;
                 }
-                index = count;
+                headIndex = count;
                 count++;
             }
 //-遍历是按照他的添加顺序来决定的
-            entries[index].hashCode = hashCode;
+            entries[headIndex].hashCode = hashCode;
             //-添加链表
-            entries[index].next = buckets[targetBucket];
-            entries[index].key = key;
-            entries[index].value = value;
+            var beforeHandIndex = buckets[targetBucket];
+            buckets[targetBucket] = headIndex;
+            entries[headIndex].key = key;
+            entries[headIndex].value = value;
+            entries[headIndex].next = beforeHandIndex;
             //-buckets[targetBucket]永远只存第一个元素，把当前index放在buckets的第一位
-            buckets[targetBucket] = index;
             version++;
 
 #if FEATURE_RANDOMIZED_STRING_HASHING
