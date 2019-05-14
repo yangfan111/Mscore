@@ -18,8 +18,9 @@ namespace System.Collections.Generic {
     using System.Diagnostics;
 
     // The SortedDictionary class implements a generic sorted list of keys 
-    // and values. Entries in a sorted list are sorted by their keys and 
-    // are accessible both by key and by index. The keys of a sorted dictionary
+    // and values.
+  
+    //The keys of a sorted dictionary
     // can be ordered either according to a specific IComparer 
     // implementation given when the sorted dictionary is instantiated, or 
     // according to the IComparable implementation provided by the keys 
@@ -30,9 +31,7 @@ namespace System.Collections.Generic {
     // values of the entries. The capacity of a sorted list is the allocated
     // length of these internal arrays. As elements are added to a sorted list, the
     // capacity of the sorted list is automatically increased as required by
-    // reallocating the internal arrays.  The capacity is never automatically 
-    // decreased, but users can call either TrimExcess or 
-    // Capacity explicitly.
+    // reallocating the internal arrays.
     // 
     // The GetKeyList and GetValueList methods of a sorted list
     // provides access to the keys and values of the sorted list in the form of
@@ -56,7 +55,10 @@ namespace System.Collections.Generic {
     // all must implement. To impose a different ordering, SortedList also
     // has a constructor that allows a specific IComparer implementation to
     // be specified.
-    // 
+    //-The capacity is never automatically decreased, but users can call either TrimExcess or Capacity explicitly.
+    //-Entries in a sorted list are sorted by their keys and are accessible both by key and by index.
+    //-索引顺序基于排序顺序。当添加元素时，元素将按正确的排序顺序插入 SortedList，同时索引会相应地进行调整。若移除了元素，索引也会相应地进行调整。因此，当在SortedList 中添加或移除元素时，特定键/值对的索引可能会更改。
+    //sortedlist在插入时执行排序,其性能损失主要在插入。其后的查找，由于已经排序了，速度应当很快。
     [DebuggerTypeProxy(typeof(System_DictionaryDebugView<,>))]
     [DebuggerDisplay("Count = {Count}")]
 #if !FEATURE_NETCORE
@@ -317,7 +319,8 @@ namespace System.Collections.Generic {
                 return GetValueListHelper();
             }
         }
-    
+        //-SortedList.Values =>GetValueListHelper()=>ValueList ，同同Dict.KeyCollection
+        //-GetEnumerator=> IEnumerator<KeyValuePair<TKey, TValue>>,同Dict.GetEnumerator
         System.Collections.ICollection System.Collections.IDictionary.Values {
             get {
                 return GetValueListHelper();
@@ -417,6 +420,7 @@ namespace System.Collections.Generic {
             }
 
             for (int i = 0; i < Count; i++) {
+                //-SortedList的做法是key,value一一对应
                 KeyValuePair<TKey, TValue> entry = new KeyValuePair<TKey, TValue>(keys[i],values[i]);
                 array[arrayIndex + i] = entry;
             }
@@ -517,9 +521,8 @@ namespace System.Collections.Generic {
         }
 
         
-        // Returns the value associated with the given key. If an entry with the
-        // given key is not found, the returned value is null.
-        // 
+        //-get 给定Key==>Array.BinarySearch获取Index==>values[Index]
+        //-set 给定Key==>Array.BinarySearch获取Index，index<0=>  Insert(~i, key, value);
         public TValue this[TKey key] {
             get {
                 int i = IndexOfKey(key);
@@ -624,7 +627,7 @@ namespace System.Collections.Generic {
         
         // Removes the entry at the given index. The size of the sorted list is
         // decreased by one.
-        // 
+        //-Remove永远移除最后一位数组
         public void RemoveAt(int index) {
             if (index < 0 || index >= _size) ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument.index, ExceptionResource.ArgumentOutOfRange_Index);
             _size--;
@@ -662,7 +665,7 @@ namespace System.Collections.Generic {
         // 
         // SortedList.Clear();
         // SortedList.TrimExcess();
-        // 
+        //-按照阀值剔除
         public void TrimExcess() {
             int threshold = (int)(((double)keys.Length) * 0.9);             
             if( _size < threshold ) {

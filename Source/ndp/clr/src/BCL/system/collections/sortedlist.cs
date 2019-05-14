@@ -22,8 +22,8 @@ namespace System.Collections {
     using System.Globalization;
 
     // The SortedList class implements a sorted list of keys and values. Entries in
-    // a sorted list are sorted by their keys and are accessible both by key and by
-    // index. The keys of a sorted list can be ordered either according to a
+    //-a sorted list are sorted by their keys and are accessible both by key and by index
+    //  The keys of a sorted list can be ordered either according to a
     // specific IComparer implementation given when the sorted list is
     // instantiated, or according to the IComparable implementation provided
     // by the keys themselves. In either case, a sorted list does not allow entries
@@ -33,9 +33,8 @@ namespace System.Collections {
     // values of the entries. The capacity of a sorted list is the allocated
     // length of these internal arrays. As elements are added to a sorted list, the
     // capacity of the sorted list is automatically increased as required by
-    // reallocating the internal arrays.  The capacity is never automatically 
-    // decreased, but users can call either TrimToSize or 
-    // Capacity explicitly.
+    // reallocating the internal arrays.  
+    // 
     // 
     // The GetKeyList and GetValueList methods of a sorted list
     // provides access to the keys and values of the sorted list in the form of
@@ -59,7 +58,9 @@ namespace System.Collections {
     // all must implement. To impose a different ordering, SortedList also
     // has a constructor that allows a specific IComparer implementation to
     // be specified.
-    // 
+    //-a sorted list are sorted by their keys and are accessible both by key and by index
+    //-The capacity is never automatically  decreased, but users can call either TrimToSize or Capacity explicitly.
+ 
     [DebuggerTypeProxy(typeof(System.Collections.SortedList.SortedListDebugView))]  
     [DebuggerDisplay("Count = {Count}")]
 [System.Runtime.InteropServices.ComVisible(true)]

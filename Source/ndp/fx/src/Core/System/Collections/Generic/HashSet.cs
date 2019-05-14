@@ -381,7 +381,7 @@ namespace System.Collections.Generic {
 #endif
         #endregion
 
-        #region IDeserializationCallback methods
+         #region IDeserializationCallback methods
 
 #if !SILVERLIGHT
         public virtual void OnDeserialization(Object sender) {
